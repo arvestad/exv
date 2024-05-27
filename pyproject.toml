@@ -30,4 +30,4 @@ exv = "exv:main"
 homepage = "http://github.com/arvestad/exv"
 
 [tool.setuptools.dynamic]
-version = {attr = "exv.version.__version__"}
+version = {attr = "version.__version__"}
