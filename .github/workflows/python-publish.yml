@@ -17,7 +17,8 @@ permissions:
   contents: read
 
 jobs:
-  build: Build distribution 📦
+  build:
+    name: Build distribution 📦
     runs-on: ubuntu-latest
 
     steps:
