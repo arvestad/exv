@@ -45,7 +45,6 @@ jobs:
         name: python-package-distributions
         path: dist/
     - name: Publish distribution 📦 to PyPI
-      environment: release
       permissions:
       # IMPORTANT: this permission is mandatory for trusted publishing
       id-token: write
