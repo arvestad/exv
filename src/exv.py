@@ -5,7 +5,7 @@ from openpyxl import load_workbook
 from version import __version__
 
 def setup_argparse():
-    ap = argparse.ArgumentParser(prog='exv')
+    ap = argparse.ArgumentParser(prog='exv', description='Command line tool for viewing Excel files.')
     ap.add_argument('infile', help='An Excel file')
     ap.add_argument('worksheet', nargs='?',
                     help='View the named worksheet. Without a worksheet either the single existing worksheet is viewed or a list of worksheets is displayed.')
