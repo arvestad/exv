@@ -1,4 +1,4 @@
-# exv -- a simle Excel file viewer for the command line
+# exv:  a simple Excel file viewer for the command line
 
 Command line tool for viewing Excel files.
 
@@ -56,7 +56,7 @@ $ exv three_sheets.xlsx harmonic
 ### Options
 
 + `-h`, `--help` -- Show basic usage.
-+ `-nr`, `--no-row-numbers` -- supress an initial column with row numbers.
++ `-nr`, `--no-row-numbers` -- suppress an initial column with row numbers.
 + `-f`, `--format` -- Choose from a large number of output formats. These are formats implemented by `tabulate`, see list below.
 + `--version` -- Show version number.
 
