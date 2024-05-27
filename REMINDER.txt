@@ -1,0 +1,7 @@
+I have setup this repo to use GitHub actions to deploy to PyPI.org.
+When I am happy with a feature or whatever, I need to:
+1. Make sure that changes are in the main branch.
+2. Go to Actions and run the Upload Python Package workflow.
+
+Someday, I will make this automated. But there are too many outdated
+tutorials for me to bother setting this up. 
