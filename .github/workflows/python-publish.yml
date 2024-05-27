@@ -45,6 +45,10 @@ jobs:
         name: python-package-distributions
         path: dist/
     - name: Publish distribution 📦 to PyPI
+      environment: release
+      permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
       uses: pypa/gh-action-pypi-publish@release/v1	
     
   pypi-publish:
