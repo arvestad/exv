@@ -13,7 +13,7 @@ def setup_argparse():
     ap.add_argument('-f', '--format', choices=tabulate_formats,
                     default='plain',
                     help='Output format.')
-    ap.add_argument('--version', action='version', version='%(prog)s '+__version__)    
+    ap.add_argument('-v', '--version', action='version', version='%(prog)s '+__version__)    
 
     return ap
 
