@@ -2,7 +2,7 @@
 name = "exv"
 dependencies = [
     "tabulate",
-    "openpyxl"
+    "openpyxl>3.0"
 ]
 authors = [
     {name = "Lars Arvestad", email = "arve@math.su.se"}
