@@ -6,7 +6,7 @@ The module `openpyxl` is used for parsing and interpretation of the input files,
 and `tabulate` is used for viewing worksheets in a tabular fashion.
 
 Formulas are handled, but no attempt is made at making use of embedded charts and other non-tabular objects.
-
+In fact, nothing fancy has dealt with.
 
 ## Usage
 
