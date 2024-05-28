@@ -1,8 +1,11 @@
 import argparse
 from tabulate import tabulate, tabulate_formats
-from openpyxl import load_workbook
 from version import __version__
 import string
+import sys
+
+from xlfile import xlFile, xlFileErrorSheetnameError
+
 
 def setup_argparse():
     ap = argparse.ArgumentParser(prog='exv', description='Command line tool for viewing Excel files.') 
@@ -16,7 +19,7 @@ def setup_argparse():
     ap.add_argument('-nr', '--no-row-numbers', action='store_true',
                     help='Do not show row numbers.')
     ap.add_argument('-f', '--format', choices=tabulate_formats,
-                    default='plain',
+                    default='presto',
                     help='Output format.')
     ap.add_argument('-v', '--version', action='version', version='%(prog)s '+__version__)    
 
@@ -42,16 +45,16 @@ def columns_ident(i):
 
 
 def view_worksheet(book, sheetname, args):
-    sh = book[sheetname]
+    sh = book.sheet(sheetname)
     tab_rows = []
 
-    for row in sh.values:
+    for row in sh.rows():
         new_row = []
         for cell in row:
             new_row.append(cell)
         tab_rows.append(new_row)
 
-    header = list(map(columns_ident, range(sh.max_column)))
+    header = list(map(columns_ident, range(sh.n_columns())))
     if args.no_indices:
         print(tabulate(tab_rows, tablefmt=args.format))
     elif args.no_col_indices:
@@ -67,15 +70,19 @@ def main():
     ap = setup_argparse()
     args = ap.parse_args()
 
-    wb = load_workbook(args.infile, data_only=True)
-    if args.worksheet:
-        view_worksheet(wb, args.worksheet, args)
-    elif len(wb.sheetnames) > 1:
-        print('Available sheets:')
-        for sheetname in wb.sheetnames:
-            print(sheetname)
-    else:
-        view_worksheet(wb, wb.sheetnames[0], args)
+    wb = xlFile.load_excel_file(args.infile)
+
+    try:
+        if args.worksheet:
+            view_worksheet(wb, args.worksheet, args)
+        elif len(wb.sheet_names()) > 1:
+            print('Available sheets:')
+            for sheetname in wb.sheet_names():
+                print(sheetname)
+        else:
+            view_worksheet(wb, wb.sheet_names()[0], args)
+    except xlFileErrorSheetnameError:
+        sys.exit(f'exv: Wrong sheet name')
         
 
 if __name__ == '__main__':
