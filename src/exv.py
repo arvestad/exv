@@ -70,7 +70,7 @@ def main():
     ap = setup_argparse()
     args = ap.parse_args()
 
-    wb = xlFile.load_excel_file(args.infile)
+    wb = xlFile.load_spreadsheet(args.infile)
 
     try:
         if args.worksheet:

@@ -1,16 +1,16 @@
 # exv:  a simple Excel file viewer for the command line
 
-Command line tool for viewing Excel files.
+Command line tool for viewing spreadsheets files, including Excel (.xls, .xlsx), Open Office (.ods), and similar.
 
-The module `openpyxl` is used for parsing and interpretation of the input files,
+The modules `openpyxl`, `xlrd`, and `odsparsator` are used for parsing and interpretation of the input files,
 and `tabulate` is used for viewing worksheets in a tabular fashion.
 
 Formulas are handled, but no attempt is made at making use of embedded charts and other non-tabular objects.
-In fact, nothing fancy has dealt with.
+In fact, nothing fancy has been dealt with. Formulas are not coming out very well from Open Office files.
 
 ## Usage
 
-The basic usage is `exv <excelfile> [<worksheet>]`. If the given excel file has a single worksheet, then the worksheet is viewed.
+The basic usage is `exv <spreadsheet> [<worksheet>]`. If the given spreadsheet file has a single worksheet, then the worksheet is viewed.
 A list of worksheet names are given if there is more than one worksheet defined in the file. You can give a format argument
 to have the sheet displayed in a special way. 
 
