@@ -59,6 +59,8 @@ def view_worksheet(book, sheetname, args):
         table_rows.append(new_row)
 
     table_rows = drop_empty_last_rows(table_rows)
+    if table_rows == []:
+        sys.exit('File, or sheet, is empty')
     table_rows = drop_empty_last_columns(table_rows)
 
     header = make_header(table_rows)
