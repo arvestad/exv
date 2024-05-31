@@ -44,33 +44,66 @@ def columns_ident(i):
     return prefix + (string.ascii_uppercase[i % 26])
 
 
+def make_header(table_rows):
+    return list(map(columns_ident, range(len(table_rows[0]))))
+
+
 def view_worksheet(book, sheetname, args):
     sh = book.sheet(sheetname)
-    tab_rows = []
+    table_rows = []
 
     for row in sh.rows():
         new_row = []
         for cell in row:
             new_row.append(cell)
-        tab_rows.append(new_row)
+        table_rows.append(new_row)
 
-    header = list(map(columns_ident, range(sh.n_columns())))
+    table_rows = drop_empty_last_rows(table_rows)
+    table_rows = drop_empty_last_columns(table_rows)
+
+    header = make_header(table_rows)
     if args.no_indices:
-        print(tabulate(tab_rows, tablefmt=args.format))
+        print(tabulate(table_rows, tablefmt=args.format))
     elif args.no_col_indices:
-        print(tabulate(tab_rows, showindex='always', tablefmt=args.format))
+        print(tabulate(table_rows, showindex='always', tablefmt=args.format))
     elif args.no_row_numbers:
-        print(tabulate(tab_rows, headers=header, tablefmt=args.format))
+        print(tabulate(table_rows, headers=header, tablefmt=args.format))
     else:
-        print(tabulate(tab_rows, headers=header, showindex='always', tablefmt=args.format))
+        print(tabulate(table_rows, headers=header, showindex='always', tablefmt=args.format))
 
-    
+
+def drop_empty_last_rows(rows):
+    last_row = len(rows) - 1
+    while rows and not(any(rows[last_row])):
+        last_row -= 1
+        rows.pop()
+    return rows
+
+
+def last_empty_column(row):
+    res = 0
+    for idx, cell in enumerate(row):
+        if cell is not None:
+            # cell is not empty, so possibly last idx to report?
+            res = idx
+    # When we get here, res contains the rightmost idx of non-empty cell
+    return res
+
+
+def drop_empty_last_columns(rows):
+    rightmost_indices = map(last_empty_column, rows)
+    limit = max(rightmost_indices)
+    return list(map(lambda r: r[:limit + 1], rows))
+
 
 def main():
     ap = setup_argparse()
     args = ap.parse_args()
 
-    wb = xlFile.load_spreadsheet(args.infile)
+    try:
+        wb = xlFile.load_spreadsheet(args.infile)
+    except FileNotFoundError:
+        sys.exit(f'exv: could not find file {args.infile}')
 
     try:
         if args.worksheet:
