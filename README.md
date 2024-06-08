@@ -2,11 +2,11 @@
 
 Command line tool for viewing spreadsheets files, including Excel (.xls, .xlsx), Open Office (.ods), and similar.
 
-The modules `openpyxl`, `xlrd`, and `odsparsator` are used for parsing and interpretation of the input files,
+The modules [openpyxl](https://pypi.org/project/openpyxl/), [xlrd](https://pypi.org/project/xlrd/), and [odsparsator](https://pypi.org/project/odsparsator/) are used for parsing and interpretation of the input files,
 and `tabulate` is used for viewing worksheets in a tabular fashion.
 
-Formulas are handled, but no attempt is made at making use of embedded charts and other non-tabular objects.
-In fact, nothing fancy has been dealt with. Formulas are not coming out very well from Open Office files.
+No attempt is made to make use of embedded charts and other non-tabular objects.
+In fact, nothing fancy has been dealt with. Formulas are not coming out very well from Open/Libre Office files.
 
 ## Usage
 
@@ -57,7 +57,7 @@ $ exv three_sheets.xlsx harmonic
 
 + `-h`, `--help` -- Show basic usage.
 + `-nr`, `--no-row-numbers` -- suppress an initial column with row numbers.
-+ `-f`, `--format` -- Choose from a large number of output formats. These are formats implemented by `tabulate`, see list below.
++ `-f`, `--format` -- Choose from a large number of output formats. These are formats implemented by [tabulate](https://pypi.org/project/tabulate/), see list below.
 + `--version` -- Show version number.
 
 ### Output formats
