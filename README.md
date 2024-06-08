@@ -3,7 +3,7 @@
 Command line tool for viewing spreadsheets files, including Excel (.xls, .xlsx), Open Office (.ods), and similar.
 
 The modules [openpyxl](https://pypi.org/project/openpyxl/), [xlrd](https://pypi.org/project/xlrd/), and [odsparsator](https://pypi.org/project/odsparsator/) are used for parsing and interpretation of the input files,
-and `tabulate` is used for viewing worksheets in a tabular fashion.
+and [tabulate](https://pypi.org/project/tabulate/) is used for viewing worksheets in a tabular fashion.
 
 No attempt is made to make use of embedded charts and other non-tabular objects.
 In fact, nothing fancy has been dealt with. Formulas are not coming out very well from Open/Libre Office files.
