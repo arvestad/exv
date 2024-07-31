@@ -1,0 +1,281 @@
+{
+    "body": [
+        {
+            "name": "Example",
+            "table": [
+                [
+                    "Car Inventory"
+                ],
+                [
+                    "Branch",
+                    "Car model",
+                    "Show Room",
+                    "Used",
+                    "Repair Shop",
+                    null,
+                    52,
+                    "=SUMIFS(Show_Room,Car_model,\"Model 01\")"
+                ],
+                [
+                    "City AA",
+                    "Model 01",
+                    2,
+                    14,
+                    12,
+                    null,
+                    52,
+                    "=SUMIFS(C3:C30,B3:B30,\"Model 01\")"
+                ],
+                [
+                    "City BB",
+                    "Model 02",
+                    20,
+                    13,
+                    10,
+                    null,
+                    null,
+                    "Sum all Model 01 cars in Show rooms"
+                ],
+                [
+                    "City CC",
+                    "Model 03",
+                    5,
+                    12,
+                    12,
+                    null,
+                    36,
+                    "=SUMIFS(Show_Room,Car_model,\"Model 02\",Branch,\"City BB\")"
+                ],
+                [
+                    "City AA",
+                    "Model 04",
+                    20,
+                    10,
+                    20,
+                    null,
+                    36,
+                    "=SUMIFS(C3:C30,B3:B30,\"Model 02\",A3:A30,\"City BB\")"
+                ],
+                [
+                    "City BB",
+                    "Model 05",
+                    15,
+                    12,
+                    8,
+                    null,
+                    null,
+                    "Sum all Model 01 cars in Show rooms in city BB"
+                ],
+                [
+                    "City CC",
+                    "Model 06",
+                    4,
+                    17,
+                    8
+                ],
+                [
+                    "City AA",
+                    "Model 07",
+                    6,
+                    10,
+                    15,
+                    null,
+                    4,
+                    "=COUNTIFS(Car_model,\"Model 04\")"
+                ],
+                [
+                    "City BB",
+                    "Model 01",
+                    17,
+                    1,
+                    3,
+                    null,
+                    null,
+                    "Count all entries of Model 04 in list"
+                ],
+                [
+                    "City CC",
+                    "Model 02",
+                    8,
+                    19,
+                    14,
+                    null,
+                    1,
+                    "=COUNTIFS(Car_model,\"Model 04\",Branch,\"City BB\")"
+                ],
+                [
+                    "City AA",
+                    "Model 03",
+                    9,
+                    9,
+                    17,
+                    null,
+                    null,
+                    "Count all occurences of Model 04 in City BB in list"
+                ],
+                [
+                    "City BB",
+                    "Model 04",
+                    17,
+                    8,
+                    5
+                ],
+                [
+                    "City CC",
+                    "Model 05",
+                    3,
+                    13,
+                    2,
+                    null,
+                    13,
+                    "=AVERAGEIFS(Show_Room,Car_model,\"Model 01\")"
+                ],
+                [
+                    "City AA",
+                    "Model 06",
+                    9,
+                    9,
+                    6,
+                    null,
+                    null,
+                    "Average of all Model 01 cars in Show rooms"
+                ],
+                [
+                    "City BB",
+                    "Model 07",
+                    9,
+                    9,
+                    8,
+                    null,
+                    18,
+                    "=AVERAGEIFS(Show_Room,Car_model,\"Model 02\",Branch,\"City BB\")"
+                ],
+                [
+                    "City CC",
+                    "Model 01",
+                    18,
+                    7,
+                    1,
+                    null,
+                    null,
+                    "Average all Model 01 cars in Show rooms in city BB"
+                ],
+                [
+                    "City AA",
+                    "Model 02",
+                    16,
+                    8,
+                    14
+                ],
+                [
+                    "City BB",
+                    "Model 03",
+                    1,
+                    14,
+                    18,
+                    null,
+                    18,
+                    "=MAXIFS(Show_Room,Car_model,\"Model 01\")"
+                ],
+                [
+                    "City CC",
+                    "Model 04",
+                    15,
+                    9,
+                    17,
+                    null,
+                    null,
+                    "Maximum of Model 01 cars in Show rooms"
+                ],
+                [
+                    "City AA",
+                    "Model 05",
+                    19,
+                    7,
+                    3,
+                    null,
+                    20,
+                    "=MAXIFS(Show_Room,Car_model,\"Model 02\",Branch,\"City BB\")"
+                ],
+                [
+                    "City BB",
+                    "Model 06",
+                    10,
+                    13,
+                    10,
+                    null,
+                    null,
+                    "Maximum of Model 01 cars in Show rooms in city BB"
+                ],
+                [
+                    "City CC",
+                    "Model 07",
+                    9,
+                    19,
+                    6
+                ],
+                [
+                    "City AA",
+                    "Model 01",
+                    15,
+                    14,
+                    2,
+                    null,
+                    2,
+                    "=MINIFS(Show_Room,Car_model,\"Model 01\")"
+                ],
+                [
+                    "City BB",
+                    "Model 02",
+                    16,
+                    1,
+                    11,
+                    null,
+                    null,
+                    "Minimum of Model 01 cars in Show rooms"
+                ],
+                [
+                    "City CC",
+                    "Model 03",
+                    6,
+                    12,
+                    3,
+                    null,
+                    16,
+                    "=MINIFS(Show_Room,Car_model,\"Model 02\",Branch,\"City BB\")"
+                ],
+                [
+                    "City AA",
+                    "Model 04",
+                    3,
+                    7,
+                    18,
+                    null,
+                    null,
+                    "Minimum of Model 01 cars in Show rooms in city BB"
+                ],
+                [
+                    "City BB",
+                    "Model 05",
+                    1,
+                    11,
+                    5
+                ],
+                [
+                    "City CC",
+                    "Model 06",
+                    13,
+                    9,
+                    18
+                ],
+                [
+                    "City AA",
+                    "Model 07",
+                    5,
+                    17,
+                    2
+                ]
+            ]
+        }
+    ]
+}

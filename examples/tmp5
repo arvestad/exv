@@ -1,0 +1,301 @@
+{
+    "body": [
+        {
+            "name": "Sheet1",
+            "table": [
+                [
+                    "Car Inventory",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "Pivot Table"
+                ],
+                [
+                    "Branch",
+                    "Car model",
+                    "Show Room",
+                    "Used",
+                    "Repair Shop"
+                ],
+                [
+                    "City AA",
+                    "Model 01",
+                    2,
+                    14,
+                    12
+                ],
+                [
+                    "City BB",
+                    "Model 02",
+                    20,
+                    13,
+                    10
+                ],
+                [
+                    "City CC",
+                    "Model 03",
+                    5,
+                    12,
+                    12
+                ],
+                [
+                    "City AA",
+                    "Model 04",
+                    20,
+                    10,
+                    20,
+                    null,
+                    "Filter"
+                ],
+                [
+                    "City BB",
+                    "Model 05",
+                    15,
+                    12,
+                    8,
+                    null,
+                    "Branch",
+                    "- all -"
+                ],
+                [
+                    "City CC",
+                    "Model 06",
+                    4,
+                    17,
+                    8
+                ],
+                [
+                    "City AA",
+                    "Model 07",
+                    6,
+                    10,
+                    15,
+                    null,
+                    null,
+                    "Data"
+                ],
+                [
+                    "City BB",
+                    "Model 01",
+                    17,
+                    1,
+                    3,
+                    null,
+                    "Car model",
+                    "Sum - Show Room",
+                    "Sum - Used",
+                    "Sum - Repair Shop"
+                ],
+                [
+                    "City CC",
+                    "Model 02",
+                    8,
+                    19,
+                    14,
+                    null,
+                    "Model 01",
+                    52,
+                    36,
+                    18
+                ],
+                [
+                    "City AA",
+                    "Model 03",
+                    9,
+                    9,
+                    17,
+                    null,
+                    "Model 02",
+                    60,
+                    41,
+                    49
+                ],
+                [
+                    "City BB",
+                    "Model 04",
+                    17,
+                    8,
+                    5,
+                    null,
+                    "Model 03",
+                    21,
+                    47,
+                    50
+                ],
+                [
+                    "City CC",
+                    "Model 05",
+                    3,
+                    13,
+                    2,
+                    null,
+                    "Model 04",
+                    55,
+                    34,
+                    60
+                ],
+                [
+                    "City AA",
+                    "Model 06",
+                    9,
+                    9,
+                    6,
+                    null,
+                    "Model 05",
+                    38,
+                    43,
+                    18
+                ],
+                [
+                    "City BB",
+                    "Model 07",
+                    9,
+                    9,
+                    8,
+                    null,
+                    "Model 06",
+                    36,
+                    48,
+                    42
+                ],
+                [
+                    "City CC",
+                    "Model 01",
+                    18,
+                    7,
+                    1,
+                    null,
+                    "Model 07",
+                    29,
+                    55,
+                    31
+                ],
+                [
+                    "City AA",
+                    "Model 02",
+                    16,
+                    8,
+                    14,
+                    null,
+                    "Total Result",
+                    291,
+                    304,
+                    268
+                ],
+                [
+                    "City BB",
+                    "Model 03",
+                    1,
+                    14,
+                    18
+                ],
+                [
+                    "City CC",
+                    "Model 04",
+                    15,
+                    9,
+                    17
+                ],
+                [
+                    "City AA",
+                    "Model 05",
+                    19,
+                    7,
+                    3,
+                    null,
+                    "Pivot Chart"
+                ],
+                [
+                    "City BB",
+                    "Model 06",
+                    10,
+                    13,
+                    10,
+                    null,
+                    null
+                ],
+                [
+                    "City CC",
+                    "Model 07",
+                    9,
+                    19,
+                    6
+                ],
+                [
+                    "City AA",
+                    "Model 01",
+                    15,
+                    14,
+                    2
+                ],
+                [
+                    "City BB",
+                    "Model 02",
+                    16,
+                    1,
+                    11
+                ],
+                [
+                    "City CC",
+                    "Model 03",
+                    6,
+                    12,
+                    3
+                ],
+                [
+                    "City AA",
+                    "Model 04",
+                    3,
+                    7,
+                    18
+                ],
+                [
+                    "City BB",
+                    "Model 05",
+                    1,
+                    11,
+                    5
+                ],
+                [
+                    "City CC",
+                    "Model 06",
+                    13,
+                    9,
+                    18
+                ],
+                [
+                    "City AA",
+                    "Model 07",
+                    5,
+                    17,
+                    2
+                ],
+                [],
+                [],
+                [
+                    "Pivot Table Cell Styles:"
+                ],
+                [
+                    "Pivot Table Categories"
+                ],
+                [
+                    "Pivot Table Corner"
+                ],
+                [
+                    "Pivot Table Field"
+                ],
+                [
+                    "Pivot Table Result"
+                ],
+                [
+                    "Pivot Table Value"
+                ],
+                [
+                    "Pivot Table Title"
+                ]
+            ]
+        }
+    ]
+}
