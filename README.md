@@ -14,6 +14,15 @@ The basic usage is `exv <spreadsheet> [<worksheet>]`. If the given spreadsheet f
 A list of worksheet names are given if there is more than one worksheet defined in the file. You can give a format argument
 to have the sheet displayed in a special way. 
 
+## Install
+
+Recommended installation is:
+```
+pip install --upgrade pip
+pip install exv
+```
+
+
 ### Example
 
 ```
